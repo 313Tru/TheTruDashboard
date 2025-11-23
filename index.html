@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torn City Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Torn City Dashboard</h1>
+        <p>Gib deinen Torn API Key ein, um deine öffentlichen Statistiken zu laden.</p>
+        
+        <div class="input-group">
+            <input type="text" id="apiKeyInput" placeholder="Dein API Key">
+            <button id="loadStatsBtn">Statistiken laden</button>
+        </div>
+
+        <!-- Bereich für den Spieler-Vergleich -->
+        <div class="comparison-section">
+            <h2>Spieler vergleichen</h2>
+            <p>Füge Spieler hinzu, um ihre öffentlichen Statistiken mit deinen zu vergleichen. Du kannst den Spielernamen oder die ID eingeben.</p>
+            <div class="input-group">
+                <input type="text" id="comparePlayerInput" placeholder="Spieler-ID eingeben">
+                <button id="addComparePlayerBtn">Spieler hinzufügen</button>
+            </div>
+        </div>
+
+        <!-- Bereich für Favoriten -->
+        <div id="favorites-section" class="favorites-section" style="display: none;">
+            <h2>Favoriten</h2>
+            <div id="favorites-list"></div>
+        </div>
+
+
+        <!-- Haupt-Container für alle Statistiken -->
+        <div id="statsContainer">
+            <!-- Bereich für die neuen Hauptinformationen -->
+            <div id="main-info-container"></div>
+
+            <!-- Navigation für die Tabs -->
+            <div id="tab-nav" class="tab-nav"></div>
+
+            <!-- Container für den Inhalt der Tabs -->
+            <div class="tab-content">
+                <div id="tab-combat" class="tab-pane"></div>
+                <div id="tab-crime" class="tab-pane"></div>
+                <div id="tab-economy" class="tab-pane"></div>
+                <div id="tab-work" class="tab-pane"></div>
+                <div id="tab-contracts" class="tab-pane"></div>
+                <div id="tab-travel" class="tab-pane"></div>
+                <div id="tab-racing" class="tab-pane"></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- SortableJS für Drag & Drop -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script type="module" src="/script.js"></script>
+</body>
+</html>
